@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scraping Mars</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid text-center">
+            <h1 class="display-4">Scraping the Surface (of Mars).</h1>
+            <p class="lead">Drawing from NASA, JPL, Twitter, USGS, and some site called "Mars Facts", this page scrapes together current info on everyone's favorite red planet.</p>
+            <hr class="my-4">
+            <p>Click the button to run a new scrape. Note, this page is BYOConfig File.</p>
+            <a class="btn btn-danger btn-block btn-lg" href="/scrape" role="button">Scrape Away!</a>
+          </div>
+        <div class = "row">
+            <div class = "col-7">
+                <img src = {{mars_complete.mars_image.featured_image}}>
+
+            </div>
+            <div class = "col-5">
+                <h5 class="text-center">Mars facts!</h5>
+                <ul style = "list-style: none">
+                    <li>{{mars_complete.mars_facts.1}}</li>
+                    <li>{{mars_complete.mars_facts.2}}</li>
+                    <li>{{mars_complete.mars_facts.3}}</li>
+                    <li>{{mars_complete.mars_facts.4}}</li>
+                    <li>{{mars_complete.mars_facts.5}}</li>
+                    <li>{{mars_complete.mars_facts.6}}</li>
+                    <li>{{mars_complete.mars_facts.7}}</li>
+                    <li>{{mars_complete.mars_facts.8}}</li>
+                </ul>
+                <h5 class = "text-center">Planning a trip? Check the weather first.</h5>
+                <p>{{mars_complete.mars_weather}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class = "col-12">
+                <h5 class = "text-center">Latest Mars Headlines:</h5>
+            </div>
+            <div class = "col-12">
+                <h6>{{mars_complete.mars_news.0.title}}</h6>
+                <p>{{mars_complete.mars_news.0.content}}</p>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "col-6">
+                <figure class="figure">
+                    <img class = "img-fluid" src= {{mars_complete.mars_hemispheres.0.image}}>
+                    <figcaption class="figure-caption">{{mars_complete.mars_hemispheres.0.title}}</figcaption>
+                </figure>
+            </div>
+            <div class = "col-6">
+                <figure class="figure w-10">
+                    <img class = "img-fluid" src= {{mars_complete.mars_hemispheres.1.image}}>
+                    <figcaption class="figure-caption">{{mars_complete.mars_hemispheres.1.title}}</figcaption>
+                </figure>
+            </div>
+        </div>    
+            <div class = "row">
+                <div class = "col-6">
+                    <figure class="figure w-40">
+                        <img class = "img-fluid" src= {{mars_complete.mars_hemispheres.2.image}}>
+                        <figcaption class="figure-caption">{{mars_complete.mars_hemispheres.2.title}}</figcaption>
+                    </figure>
+                </div>
+                <div class = "col-6">
+                    <figure class="figure w-40">
+                        <img class = "img-fluid" src= {{mars_complete.mars_hemispheres.3.image}}>
+                        <figcaption class="figure-caption">{{mars_complete.mars_hemispheres.3.title}}</figcaption>
+                    </figure>
+                </div>
+        </div>
+        
+    </div>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
